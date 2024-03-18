@@ -7,6 +7,15 @@ from utils import cache
 import matplotlib.pyplot as plt
 import argparse
 import time
+import json
+
+records = {}
+records_file_path = 'cache/records.json'
+def update_records(key, prompt, response):
+    global records
+    records[key] = [prompt, response]
+    with open(records_file_path, 'w') as f:
+        json.dump(records, f, indent=4)
 
 # This only applies to visualization in this file.
 scale_boxes = False
@@ -47,13 +56,18 @@ if __name__ == "__main__":
 
     cache.init_cache()
 
-    prompts_query = get_prompts(args.prompt_type, model=model)
+    ### get list of items (idx, prompt)
+    prompts_data = get_prompts(args.prompt_type, model=model)
+    prompts_query = prompts_data['prompts']
+    prompts_key = prompts_data['keys']
     
-    for ind, prompt in enumerate(prompts_query):
-        if isinstance(prompt, list):
+    for ind, (prompt, key) in enumerate(zip(prompts_query, prompts_key)):
+        #if isinstance(prompt, list):
             # prompt, seed
-            prompt = prompt[0]
-        prompt = prompt.strip().rstrip(".")
+        #    prompt = prompt[0]
+        # print(prompt)
+        prompt_only = prompt.strip().rstrip(".")
+        # print(prompt_only)
         
         response = cache.get_cache(prompt)
         if response is None:
@@ -70,14 +84,20 @@ if __name__ == "__main__":
             while True:
                 attempts += 1
                 if args.auto_query:
-                    resp = get_layout(prompt=prompt, llm_kwargs=llm_kwargs)
+                    resp = get_layout(prompt=prompt_only, llm_kwargs=llm_kwargs)
                     print("Response:", resp)
                 
-                try:
-                    parsed_input = parse_input_with_negative(text=resp, no_input=args.auto_query)
-                    if parsed_input is None:
-                        raise ValueError("Invalid input")
-                    raw_gen_boxes, bg_prompt, neg_prompt = parsed_input
+                #try:
+                parsed_input = parse_input_with_negative(text=resp, no_input=args.auto_query)
+                    #if parsed_input is None:
+                    #    raise ValueError("Invalid input")
+                if parsed_input == "Invalid input":
+                    cache.add_cache(prompt, parsed_input)
+                    update_records(key, prompt, parsed_input)
+                                        
+                    break
+                raw_gen_boxes, bg_prompt, neg_prompt = parsed_input
+                '''
                 except (ValueError, SyntaxError, TypeError) as e:
                     if attempts > 3:
                         print("Retrying too many times, skipping")
@@ -85,6 +105,7 @@ if __name__ == "__main__":
                     print(f"Encountered invalid data with prompt {prompt} and response {resp}: {e}, retrying")
                     time.sleep(10)
                     continue
+                '''
                 
                 gen_boxes = [{'name': box[0], 'bounding_box': box[1]} for box in raw_gen_boxes]
                 gen_boxes = filter_boxes(gen_boxes, scale_boxes=scale_boxes)
@@ -98,7 +119,8 @@ if __name__ == "__main__":
                     save = "y"
                 if save == "y" or save == "Y":
                     response = f"{raw_gen_boxes}\n{bg_prompt_text}{bg_prompt}\n{neg_prompt_text}{neg_prompt}"
-                    cache.add_cache(prompt, response)
+                    cache.add_cache(prompt,response)
+                    update_records(key, prompt, response)
                 else:
                     print("Not saved. Will generate the same prompt again.")
                     continue

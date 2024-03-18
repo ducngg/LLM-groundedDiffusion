@@ -98,7 +98,8 @@ def parse_input_with_negative(text=None, no_input=False):
         gen_boxes, text_rem = text_split
     elif len(text_split) == 1:
         if no_input:
-            raise user_error(f"Invalid input (no background prompt): {text}")
+            # raise user_error(f"Invalid input (no background prompt): {text}")
+            return "Invalid input"
         gen_boxes = text
         text_rem = ""
         while not text_rem:
@@ -107,7 +108,8 @@ def parse_input_with_negative(text=None, no_input=False):
         if bg_prompt_text_no_trailing_space in text_rem:
             text_rem = text_rem.split(bg_prompt_text_no_trailing_space)[1]
     else:
-        raise user_error(f"Invalid input (possibly multiple background prompts): {text}")
+        # raise user_error(f"Invalid input (possibly multiple background prompts): {text}")
+        return "Invalid input"
     
     text_split = text_rem.split(neg_prompt_text_no_trailing_space)
     
@@ -123,7 +125,8 @@ def parse_input_with_negative(text=None, no_input=False):
             if neg_prompt_text_no_trailing_space in neg_prompt:
                 neg_prompt = neg_prompt.split(neg_prompt_text_no_trailing_space)[1]
     else:
-        raise user_error(f"Invalid input (possibly multiple negative prompts): {text}")
+        return "Invalid input"
+        # raise user_error(f"Invalid input (possibly multiple negative prompts): {text}")
     
     try:
         gen_boxes = ast.literal_eval(gen_boxes)    

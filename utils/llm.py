@@ -5,8 +5,15 @@ from utils.cache import get_cache, add_cache
 from utils.parse import size, parse_input_with_negative, filter_boxes
 import traceback
 import time
+from openai import AzureOpenAI
 
 model_names = ["vicuna", "vicuna-13b", "vicuna-13b-v1.3", "vicuna-33b-v1.3", "Llama-2-7b-hf", "Llama-2-13b-hf", "Llama-2-70b-hf", "FreeWilly2", "StableBeluga2", "gpt-3.5-turbo", "gpt-3.5", "gpt-4", "text-davinci-003"]
+
+client = AzureOpenAI(
+    azure_endpoint="https://ura-gpt4-v.openai.azure.com/",
+    api_version="2023-07-01-preview",
+    api_key="3cb748f82bb04208aa84734bae93959d"
+)
 
 def get_full_prompt(template, prompt, suffix=None):
     full_prompt = template.format(prompt=prompt)
@@ -52,7 +59,18 @@ def get_llm_kwargs(model, template_version):
 def get_layout(prompt, llm_kwargs, suffix=""):
     # No cache in this function
     model, template, api_base, max_tokens, temperature, stop, headers = llm_kwargs.model, llm_kwargs.template, llm_kwargs.api_base, llm_kwargs.max_tokens, llm_kwargs.temperature, llm_kwargs.stop, llm_kwargs.headers
-
+    
+    gptResponse = client.chat.completions.create(
+        model="gpt4",
+        messages=[{"role": "user", "content": get_full_prompt(template, prompt, suffix).strip()}],
+        temperature=temperature,
+        max_tokens=max_tokens,
+        stop=stop
+    )
+    
+    gptResultMessage = gptResponse.choices[0].message.content
+    return gptResultMessage
+    '''
     done = False
     attempts = 0
     while not done:
@@ -89,8 +107,8 @@ def get_layout(prompt, llm_kwargs, suffix=""):
         response = r.json()['choices'][0]['message']['content']
     else:
         response = r.json()['choices'][0]['text']
-
-    return response
+    '''
+    
 
 
 def get_layout_with_cache(prompt, *args, **kwargs):

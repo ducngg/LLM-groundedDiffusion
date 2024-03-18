@@ -1,176 +1,234 @@
 {
-    "a cat sits down in front of a laptop ": [
+    "119828": [
+        "a cat sits down in front of a laptop ",
         "[('a cat', [201, 256, 110, 100]), ('a laptop', [150, 300, 212, 100])]\nBackground prompt: A realistic scene\nNegative prompt: "
     ],
-    "A long white train has a blue pin stripe.": [
+    "352491": [
+        "A long white train has a blue pin stripe.",
         "[('a long white train with a blue pin stripe', [10, 256, 492, 100])]\nBackground prompt: A realistic scene\nNegative prompt: "
     ],
-    "A man who is skiing performs a trick. ": [
+    "528314": [
+        "A man who is skiing performs a trick. ",
         "[('a man skiing', [156, 182, 200, 230])]\nBackground prompt: A realistic snowy mountain scene\nNegative prompt: "
     ],
-    "A glass vase full of feathers on a table in front of a window.": [
+    "87742": [
+        "A glass vase full of feathers on a table in front of a window.",
         "[('a glass vase full of feathers', [201, 168, 110, 220]), ('a table', [100, 148, 312, 100])]\nBackground prompt: A realistic scene with a window\nNegative prompt: "
     ],
-    "All of the children are gathered around Santa Claus.": [
+    "489842": [
+        "All of the children are gathered around Santa Claus.",
         "[('Santa Claus', [206, 190, 100, 220]), ('a child', [156, 250, 50, 100]), ('a child', [260, 250, 50, 100]), ('a child', [310, 260, 50, 90]), ('a child', [100, 260, 50, 90])]\nBackground prompt: A realistic scene\nNegative prompt: "
     ],
-    "A photo of a bench in the middle of the beach.": [
+    "282046": [
+        "A photo of a bench in the middle of the beach.",
         "[('a bench', [156, 256, 200, 100])]\nBackground prompt: A realistic scene of the beach\nNegative prompt: "
     ],
-    "A row of boats parked next to a shore line.": [
+    "50006": [
+        "A row of boats parked next to a shore line.",
         "[('a boat', [30, 256, 100, 100]), ('a boat', [140, 256, 100, 100]), ('a boat', [250, 256, 100, 100]), ('a boat', [360, 256, 100, 100])]\nBackground prompt: A realistic scene with a shore line\nNegative prompt: "
     ],
-    "Two surfers riding a wave back to shore.": [
+    "375469": [
+        "Two surfers riding a wave back to shore.",
         "[('a surfer', [120, 256, 100, 192]), ('a surfer', [292, 256, 100, 192])]\nBackground prompt: A realistic scene of the sea with waves near the shore\nNegative prompt: "
     ],
-    "Diesel train engine with company logo in train yard.": [
+    "493566": [
+        "Diesel train engine with company logo in train yard.",
         "[('a diesel train engine', [120, 196, 272, 150]), ('a company logo', [180, 210, 60, 40])]\nBackground prompt: A realistic train yard scene\nNegative prompt: "
     ],
-    "A young woman poses comically with a piece of pizza in her mouth.": [
+    "58350": [
+        "A young woman poses comically with a piece of pizza in her mouth.",
         "[('a young woman', [101, 50, 310, 462]), ('a piece of pizza', [256, 256, 50, 25])]\nBackground prompt: A realistic scene\nNegative prompt: "
     ],
-    "A herd of cattle and zebra standing next to each other on a  field.": [
+    "49761": [
+        "A herd of cattle and zebra standing next to each other on a  field.",
         "[('a herd of cattle', [30, 200, 200, 150]), ('a zebra', [250, 210, 100, 140]), ('a zebra', [370, 215, 100, 135])]\nBackground prompt: A realistic field scene\nNegative prompt: "
     ],
-    "A red fire hydrant embedded in a city sidewalk.": [
+    "38048": [
+        "A red fire hydrant embedded in a city sidewalk.",
         "[('a red fire hydrant', [201, 256, 110, 256])]\nBackground prompt: A realistic city sidewalk scene\nNegative prompt: "
     ],
-    "Three giraffes looking in different directions from each other. ": [
+    "507042": [
+        "Three giraffes looking in different directions from each other. ",
         "[('a giraffe', [30, 50, 140, 400]), ('a giraffe', [190, 50, 140, 400]), ('a giraffe', [350, 50, 140, 400])]\nBackground prompt: A realistic scene\nNegative prompt: "
     ],
-    "A bus on the side of the road in traffic.": [
+    "243867": [
+        "A bus on the side of the road in traffic.",
         "[('a bus', [150, 190, 212, 160])]\nBackground prompt: A realistic scene with a road in traffic\nNegative prompt: "
     ],
-    "A baseball player bobble head next to two computer monitors on a desk.": [
+    "127987": [
+        "A baseball player bobble head next to two computer monitors on a desk.",
         "[('a baseball player bobble head', [201, 201, 110, 310]), ('a computer monitor', [20, 100, 181, 140]), ('a computer monitor', [311, 100, 181, 140])]\nBackground prompt: A realistic scene with a desk\nNegative prompt: "
     ],
-    "A water hydrant is that frozen with nothing on it. ": [
+    "390301": [
+        "A water hydrant is that frozen with nothing on it. ",
         "[('a water hydrant', [206, 204, 100, 100])]\nBackground prompt: A realistic scene with ice and snow\nNegative prompt: nothing on it"
     ],
-    "A woman in a coat and cat is towing luggage through an airport.": [
+    "12280": [
+        "A woman in a coat and cat is towing luggage through an airport.",
         "[('a woman in a coat', [121, 50, 120, 362]), ('a cat', [261, 300, 80, 80]), ('luggage', [321, 320, 150, 192])]\nBackground prompt: A realistic airport scene\nNegative prompt: "
     ],
-    "A bunch of remotes that are in cloth holders.": [
+    "400161": [
+        "A bunch of remotes that are in cloth holders.",
         "[('a remote in cloth holder', [80, 196, 80, 150]), ('a remote in cloth holder', [180, 196, 80, 150]), ('a remote in cloth holder', [280, 196, 80, 150]), ('a remote in cloth holder', [380, 196, 80, 150])]\nBackground prompt: A realistic scene\nNegative prompt: "
     ],
-    "a man holding a surfboard outside a building in a driveway": [
+    "529939": [
+        "a man holding a surfboard outside a building in a driveway",
         "[('a man', [150, 100, 100, 300]), ('a surfboard', [155, 150, 25, 250]), ('a building', [300, 50, 200, 450])]\nBackground prompt: A realistic scene with a driveway\nNegative prompt: "
     ],
-    "A train with lights on traveling on train tracks.": [
+    "323828": [
+        "A train with lights on traveling on train tracks.",
         "[('a train with lights on', [100, 256, 312, 100]), ('train tracks', [50, 356, 412, 50])]\nBackground prompt: A realistic scene\nNegative prompt: "
     ],
-    "A white toilet and sink in a room.": [
+    "409358": [
+        "A white toilet and sink in a room.",
         "[('a white toilet', [120, 256, 120, 150]), ('a white sink', [320, 256, 120, 120])]\nBackground prompt: A realistic room\nNegative prompt: "
     ],
-    "Man standing beneath large sail on beach with man controlling from distance.": [
+    "576654": [
+        "Man standing beneath large sail on beach with man controlling from distance.",
         "[('a man standing', [120, 256, 80, 200]), ('a large sail', [50, 50, 412, 306]), ('a man controlling', [350, 256, 80, 200])]\nBackground prompt: A realistic beach scene\nNegative prompt: "
     ],
-    "A bus parked in the weeds on a sunny day ": [
+    "387387": [
+        "A bus parked in the weeds on a sunny day ",
         "[('a bus', [96, 190, 320, 222])]\nBackground prompt: A realistic scene with weeds on a sunny day\nNegative prompt: "
     ],
-    "A train is pulling into the train station.": [
+    "232538": [
+        "A train is pulling into the train station.",
         "[('a train', [100, 250, 312, 100])]\nBackground prompt: A realistic train station scene\nNegative prompt: "
     ],
-    "A skateboarder is on top of a cement bowl.": [
+    "31093": [
+        "A skateboarder is on top of a cement bowl.",
         "[('a skateboarder', [156, 196, 200, 316])]\nBackground prompt: A realistic scene with a cement bowl\nNegative prompt: "
     ],
-    "A double decker bus is stopped with a man in a vest looking in.": [
+    "531036": [
+        "A double decker bus is stopped with a man in a vest looking in.",
         "[('a double decker bus', [100, 100, 312, 300]), ('a man in a vest', [200, 250, 50, 100])]\nBackground prompt: A realistic scene\nNegative prompt: "
     ],
-    "A woman standing next to a young man near a pile of fruit.": [
+    "280891": [
+        "A woman standing next to a young man near a pile of fruit.",
         "[('a woman', [150, 100, 100, 300]), ('a young man', [270, 110, 100, 290]), ('a pile of fruit', [350, 300, 120, 120])]\nBackground prompt: A realistic scene\nNegative prompt: "
     ],
-    "A living room that is filled with furniture.": [
+    "532761": [
+        "A living room that is filled with furniture.",
         "[('furniture', [20, 50, 472, 462])]\nBackground prompt: A realistic scene of a living room\nNegative prompt: "
     ],
-    "The man is spraying down the toilet to clean it.": [
+    "206411": [
+        "The man is spraying down the toilet to clean it.",
         "[('a man', [150, 50, 212, 462]), ('a toilet', [300, 250, 150, 262])]\nBackground prompt: A realistic bathroom scene\nNegative prompt: "
     ],
-    "A bowl of Asian Cuisine with beef, noodles and broccoli.": [
+    "541634": [
+        "A bowl of Asian Cuisine with beef, noodles and broccoli.",
         "[('a bowl of Asian Cuisine', [156, 206, 200, 100]), ('beef', [176, 236, 60, 40]), ('noodles', [216, 246, 60, 30]), ('broccoli', [256, 226, 40, 60])]\nBackground prompt: A realistic top-down view\nNegative prompt: "
     ],
-    "Two horses hitched to a wagon with a driver.": [
+    "121242": [
+        "Two horses hitched to a wagon with a driver.",
         "[('a horse', [30, 200, 150, 250]), ('a horse', [180, 200, 150, 250]), ('a wagon', [330, 220, 160, 150]), ('a driver', [340, 100, 60, 120])]\nBackground prompt: A realistic scene\nNegative prompt: "
     ],
-    "The white plate contains a meat sandwich on toast, garnished with lettuce, onions, and tomato.": [
+    "227985": [
+        "The white plate contains a meat sandwich on toast, garnished with lettuce, onions, and tomato.",
         "[('a white plate', [156, 206, 200, 20]), ('a meat sandwich on toast', [181, 226, 150, 50]), ('lettuce garnish', [191, 231, 30, 15]), ('onion garnish', [221, 231, 30, 15]), ('tomato garnish', [251, 231, 30, 15])]\nBackground prompt: A realistic scene\nNegative prompt: "
     ],
-    "a woman holding an umbrella next to a wall ": [
+    "81594": [
+        "a woman holding an umbrella next to a wall ",
         "[('a woman holding an umbrella', [150, 50, 212, 462])]\nBackground prompt: A realistic scene with a wall\nNegative prompt: "
     ],
-    "A young man dressed for skiing talking on a cell phone.": [
+    "48564": [
+        "A young man dressed for skiing talking on a cell phone.",
         "[('a young man dressed for skiing', [156, 101, 200, 311]), ('a cell phone', [210, 250, 50, 100])]\nBackground prompt: A realistic scene\nNegative prompt: "
     ],
-    "A young bald man dressed sharply smiles happily": [
+    "491867": [
+        "A young bald man dressed sharply smiles happily",
         "[('a young bald man', [156, 106, 200, 306])]\nBackground prompt: A realistic scene\nNegative prompt: "
     ],
-    "THERE IS A MAN STANDING WITH A TIE AND SUIT ON": [
+    "18770": [
+        "THERE IS A MAN STANDING WITH A TIE AND SUIT ON",
         "[('a man with a tie and suit', [156, 50, 200, 462])]\nBackground prompt: A realistic scene\nNegative prompt: "
     ],
-    "A delicious looking pizza with a variety of vegetable toppings stands out on a yellow plate.": [
+    "579900": [
+        "A delicious looking pizza with a variety of vegetable toppings stands out on a yellow plate.",
         "[('a yellow plate', [156, 206, 200, 200]), ('a pizza with vegetable toppings', [181, 231, 150, 150])]\nBackground prompt: A realistic scene\nNegative prompt: "
     ],
-    "a male tennis player on the tennis court returning a serve": [
+    "373382": [
+        "a male tennis player on the tennis court returning a serve",
         "[('a male tennis player', [150, 196, 212, 316])]\nBackground prompt: A realistic tennis court scene\nNegative prompt: "
     ],
-    "A man with goggles on snow skiing on a mountain": [
+    "51712": [
+        "A man with goggles on snow skiing on a mountain",
         "[('a man with goggles', [156, 112, 200, 300])]\nBackground prompt: A realistic scene of snow skiing on a mountain\nNegative prompt: "
     ],
-    "a close up of a blender on a counter being operated by a person": [
+    "144784": [
+        "a close up of a blender on a counter being operated by a person",
         "[('a blender', [196, 184, 120, 228]), ('a person', [0, 0, 512, 512])]\nBackground prompt: A realistic close-up view of a kitchen counter\nNegative prompt: "
     ],
-    "A red stop sign with a green street sign posted above it.": [
+    "104782": [
+        "A red stop sign with a green street sign posted above it.",
         "[('a red stop sign', [206, 196, 100, 100]), ('a green street sign', [206, 86, 100, 30])]\nBackground prompt: A realistic scene\nNegative prompt: "
     ],
-    "Tennis player and white outfit swinging his racket on the court. ": [
+    "126137": [
+        "Tennis player and white outfit swinging his racket on the court. ",
         "[('a tennis player', [120, 100, 272, 312]), ('a tennis racket', [180, 200, 75, 200]), ('a white outfit', [120, 100, 272, 312])]\nBackground prompt: A realistic tennis court scene\nNegative prompt: "
     ],
-    "Pastry dessert with powdered sugar and carrots on a blue and white plate.": [
+    "485972": [
+        "Pastry dessert with powdered sugar and carrots on a blue and white plate.",
         "[('a pastry dessert', [186, 206, 140, 96]), ('powdered sugar', [186, 206, 140, 96]), ('carrots', [206, 246, 100, 50]), ('a blue and white plate', [150, 200, 212, 112])]\nBackground prompt: A realistic top-down view\nNegative prompt: "
     ],
-    "A bike parked in front of a parking meter.": [
+    "370208": [
+        "A bike parked in front of a parking meter.",
         "[('a bike', [150, 250, 212, 162]), ('a parking meter', [380, 210, 50, 302])]\nBackground prompt: A realistic scene\nNegative prompt: "
     ],
-    "Multiple pictures of treats and desserts for eating.": [
+    "435081": [
+        "Multiple pictures of treats and desserts for eating.",
         "[('a treat', [50, 100, 90, 90]), ('a dessert', [180, 100, 90, 90]), ('a treat', [310, 100, 90, 90]), ('a dessert', [440, 100, 72, 90])]\nBackground prompt: A realistic scene with multiple pictures of treats and desserts for eating\nNegative prompt: "
     ],
-    "A man in yellow shirt and black shorts playing a game of tennis.": [
+    "323895": [
+        "A man in yellow shirt and black shorts playing a game of tennis.",
         "[('a man in yellow shirt and black shorts', [156, 104, 200, 304])]\nBackground prompt: A realistic scene with a tennis court\nNegative prompt: "
     ],
-    "a bus travels down the street with many cars on a sunny day": [
+    "124798": [
+        "a bus travels down the street with many cars on a sunny day",
         "[('a bus', [120, 190, 272, 160]), ('many cars', [30, 250, 450, 100])]\nBackground prompt: A realistic scene on a sunny day with a street\nNegative prompt: "
     ],
-    "A person eating from a plate on their lap while sitting in a camping chair.": [
+    "18193": [
+        "A person eating from a plate on their lap while sitting in a camping chair.",
         "[('a person', [150, 50, 212, 462]), ('a plate', [210, 300, 92, 92]), ('a camping chair', [130, 200, 252, 312])]\nBackground prompt: A realistic outdoor scene\nNegative prompt: "
     ],
-    "A man riding a skateboard on top of a cement rail.": [
+    "15597": [
+        "A man riding a skateboard on top of a cement rail.",
         "[('a man riding a skateboard', [186, 201, 140, 311]), ('a cement rail', [0, 412, 512, 100])]\nBackground prompt: A realistic scene\nNegative prompt: "
     ],
-    "A able topped with lots of heart shaped cakes.": [
+    "128476": [
+        "A able topped with lots of heart shaped cakes.",
         "[('a table', [20, 148, 472, 216]), ('a heart-shaped cake', [51, 226, 80, 80]), ('a heart-shaped cake', [151, 226, 80, 80]), ('a heart-shaped cake', [251, 226, 80, 80]), ('a heart-shaped cake', [351, 226, 80, 80])]\nBackground prompt: A realistic scene\nNegative prompt: "
     ],
-    "A large boat in the water just in front of a light house": [
+    "160772": [
+        "A large boat in the water just in front of a light house",
         "[('a large boat', [120, 256, 272, 128]), ('a light house', [402, 104, 90, 248])]\nBackground prompt: A realistic scene with water\nNegative prompt: "
     ],
-    "A yellow bus is on a street near a black guard rail.": [
+    "15338": [
+        "A yellow bus is on a street near a black guard rail.",
         "[('a yellow bus', [120, 200, 272, 150]), ('a black guard rail', [400, 256, 112, 20])]\nBackground prompt: A realistic street scene\nNegative prompt: "
     ],
-    "A man and woman are sitting at a table eating pizza.": [
+    "113720": [
+        "A man and woman are sitting at a table eating pizza.",
         "[('a man', [95, 104, 160, 308]), ('a woman', [255, 108, 162, 304]), ('a table', [50, 280, 412, 132]), ('a pizza', [176, 312, 160, 160])]\nBackground prompt: A realistic scene\nNegative prompt: "
     ],
-    "a small child with an open umbrella on the ground": [
+    "198489": [
+        "a small child with an open umbrella on the ground",
         "[('a small child', [156, 102, 200, 300]), ('an open umbrella', [180, 312, 152, 152])]\nBackground prompt: A realistic scene\nNegative prompt: "
     ],
-    "A baseball player is swinging a bat at a ball while the catcher tries to catch it.": [
+    "359540": [
+        "A baseball player is swinging a bat at a ball while the catcher tries to catch it.",
         "[('a baseball player swinging a bat', [110, 152, 120, 300]), ('a ball', [240, 210, 30, 30]), ('a catcher', [320, 182, 120, 270])]\nBackground prompt: A realistic scene on a baseball field\nNegative prompt: "
     ],
-    "A giraffe eats leaves through a wire fence.": [
+    "498857": [
+        "A giraffe eats leaves through a wire fence.",
         "[('a giraffe', [120, 50, 272, 462]), ('wire fence', [0, 0, 512, 512])]\nBackground prompt: A realistic scene with trees and foliage\nNegative prompt: "
     ],
-    "A monitor, keyboard, coffee cup, and plastic bottle sit on a table. ": [
+    "226171": [
+        "A monitor, keyboard, coffee cup, and plastic bottle sit on a table. ",
         "[('a monitor', [150, 50, 212, 158]), ('a keyboard', [140, 208, 232, 50]), ('a coffee cup', [50, 210, 60, 80]), ('a plastic bottle', [400, 210, 50, 120]), ('a table', [20, 148, 472, 216])]\nBackground prompt: A realistic top-down view\nNegative prompt: "
     ],
-    "An old stone and brick building three stories high.": [
+    "79588": [
+        "An old stone and brick building three stories high.",
         "[('an old stone and brick building', [0, 0, 512, 512])]\nBackground prompt: A realistic scene\nNegative prompt: "
     ]
 }

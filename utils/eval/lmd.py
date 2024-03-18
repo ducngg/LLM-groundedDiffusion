@@ -8,6 +8,7 @@ prompt_prefix = "A realistic photo of a scene"
 evaluate_classes = ['backpack', 'book', 'bottle',
                     'bowl', 'car', 'cat', 'chair', 'cup', 'dog', 'laptop']
 
+'''
 def get_eval_info_from_prompt_lmd(prompt):
     """
     Note: object_name needs to be a substring of each item in texts to make `count` and `get_box` in the predicate work
@@ -232,8 +233,10 @@ def get_prompt_predicates_spatial(num_prompts=25, left_right_only=False):
             prompt_predicates += [prompt_predicate] * repeat
 
     return prompt_predicates
+'''
 
 def get_lmd_prompts():
+    '''
     # negation
     prompt_predicates_negation = get_prompt_predicates_negation(repeat=10)
     # numeracy
@@ -249,13 +252,20 @@ def get_lmd_prompts():
     prompts_spatial = [prompt for prompt, _ in prompt_predicates_spatial]
     
     prompts_all = prompts_negation + prompts_numeracy + prompts_attribution + prompts_spatial
+    '''
+    data = None
+    import json
+    
+    with open("dataset.json", "r") as file:
+        data = json.load(file)
 
     prompts = {
-        'lmd': prompts_all,
-        'lmd_negation': prompts_negation,
-        'lmd_numeracy': prompts_numeracy,
-        'lmd_attribution': prompts_attribution,
-        'lmd_spatial': prompts_spatial,
+        'lmd': data
+        #'lmd_negation': prompts_negation,
+        #'lmd_numeracy': prompts_numeracy,
+        #'lmd_attribution': prompts_attribution,
+        #'lmd_spatial': prompts_spatial,
     }
 
     return prompts
+

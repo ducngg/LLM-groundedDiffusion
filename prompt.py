@@ -75,37 +75,24 @@ def get_prompts(prompt_type, model, allow_non_exist=False):
     """
     This function returns the text prompts according to the requested `prompt_type` and `model`. Set `model` to "all" to return all the text prompts in the current type. Otherwise we may want to have different prompts for gpt-3.5 and gpt-4 to prevent confusion.
     """
-    prompts_gpt4, prompts_gpt3_5 = {}, {}
+    if "gpt-4" not in model:
+        return None
+    
     if prompt_type.startswith("lmd"):
         from utils.eval.lmd import get_lmd_prompts
 
         prompts = get_lmd_prompts()
-
-        # We do not add to both dict to prevent duplicates when model is set to "all".
-        if "gpt-4" in model:
-            prompts_gpt4.update(prompts)
-        else:
-            prompts_gpt3_5.update(prompts)
-    elif prompt_type == "demo":
-        prompts_gpt4["demo"] = prompts_demo_gpt4
-        prompts_gpt3_5["demo"] = prompts_demo_gpt3_5
-
-    if "all" in model:
-        return prompts_gpt4.get(prompt_type, []) + prompts_gpt3_5.get(prompt_type, [])
-    elif "gpt-4" in model:
-        if allow_non_exist:
-            return prompts_gpt4.get(prompt_type, [])
-        return prompts_gpt4[prompt_type]
-    else:
-        # Default: gpt-3.5
-        if allow_non_exist:
-            return prompts_gpt3_5.get(prompt_type, [])
-        return prompts_gpt3_5[prompt_type]
+        
+        return {
+            "prompts": prompts['lmd'].values(), 
+            "keys": prompts['lmd'].keys()
+        }
 
 
 if __name__ == "__main__":
     # Print the full prompt for the latest prompt in prompts
     # This allows pasting into an LLM web UI
+    '''
     prompt_type = "demo"
 
     assert prompt_type in prompt_types, f"prompt_type {prompt_type} does not exist"
@@ -122,3 +109,12 @@ if __name__ == "__main__":
         import json
 
         print(json.dumps(prompt_full.strip("\n")))
+    
+    data = None
+    import json
+    
+    with open("dataset.json", "r") as file:
+        data = json.load(file)
+        
+    return data
+    '''
