@@ -7,6 +7,8 @@ import warnings
 import inflect
 import gradio as gr
 
+import re
+
 p = inflect.engine()
 # user_error = ValueError
 user_error = gr.Error
@@ -24,6 +26,23 @@ size = box_scale
 size_h, size_w = size
 print(f"Using box scale: {box_scale}")
 
+def obj_parser(s) -> list[tuple[str,list[int]]]:
+    # Define the regular expression pattern to match substrings inside brackets
+    pattern = r'\((.*?)\)'
+
+    # Use re.findall to find all substrings matching the pattern
+    objs = re.findall(pattern, s)
+    
+    res = []
+    
+    for obj in objs:
+        seperator = r"', "
+        label, coor = obj.split(seperator)
+        label = label[1:]
+        coor = ast.literal_eval(coor)
+        res.append((label, coor))
+
+    return res
 
 def parse_input(text=None, no_input=False):
     warnings.warn("Parsing input without negative prompt is deprecated.")
