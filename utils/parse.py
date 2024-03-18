@@ -129,7 +129,7 @@ def parse_input_with_negative(text=None, no_input=False):
         # raise user_error(f"Invalid input (possibly multiple negative prompts): {text}")
     
     try:
-        gen_boxes = ast.literal_eval(gen_boxes)    
+        gen_boxes = obj_parser(gen_boxes)    
     except SyntaxError as e:
         # Sometimes the response is in plain text
         if "No objects" in gen_boxes or gen_boxes.strip() == "":
